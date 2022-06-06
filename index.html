@@ -5,7 +5,7 @@
         <title>Days until</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <style>
-    @font-face {
+@font-face {
     font-family: 'Graphik';
     src: local('Graphik Regular'), local('Graphik-Regular'),
         url('Graphik-Regular.woff2') format('woff2'),
@@ -22,8 +22,8 @@ body {
 }
 
 #main {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-    font-size: 5vw;
+    font-family: "Graphik",-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+    font-size: 3vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,7 +48,7 @@ body {
 }
 
 #days, #hours, #minutes, #seconds {
-    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, 'Ubuntu Mono', Courier, monospace;
+    font-family: "Graphik",'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, 'Ubuntu Mono', Courier, monospace;
     display: inline-block;
     text-align: right;
     min-width: 2.2ch;
@@ -76,7 +76,7 @@ body {
                 if (negative) {
                     delta = -delta
                 }
-                const until = !negative ? 'until' : 'since'
+                const until = !negative ? '' : ''
                 document.title = `Days ${until} ${name}`
                 set('until', until)
                 const days = Math.floor(delta / (1000 * 60 * 60 * 24))
